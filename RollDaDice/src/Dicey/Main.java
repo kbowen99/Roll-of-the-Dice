@@ -6,7 +6,7 @@ public class Main {
 
 	//Test
 	private static Scanner in = new Scanner(System.in);
-	static String versionNum = "0.0.1";
+	static String versionNum = "0.0.2";
 	
 	public static void main(String[] args) {
 
