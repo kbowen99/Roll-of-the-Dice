@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
+	//Test
 	private static Scanner in = new Scanner(System.in);
 	static String versionNum = "0.0.1";
 	

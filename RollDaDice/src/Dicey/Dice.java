@@ -2,6 +2,8 @@ package Dicey;
 
 public class Dice {
 	
+	//test
+	
 	int KillPc = 30;
 	String Graph[][][][][][][][][] = new String[KillPc][KillPc][KillPc][KillPc][KillPc][KillPc][KillPc][KillPc][KillPc] ;
 	
