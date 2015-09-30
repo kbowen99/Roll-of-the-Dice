@@ -2,7 +2,7 @@ package Dicey;
 
 public class Dice {
 	
-	//test 
+	
 	
 	int dieSides = 12;
 	int dieRolls[] = new int[13];
@@ -13,6 +13,9 @@ public class Dice {
 	}
 	
 	String doMagicalDice(String userS) {
+		
+		dumpDaGraph1();
+		
 		int rolls = 0;
 		
 		try {
@@ -25,7 +28,31 @@ public class Dice {
 			int tmpRoll = rollDie();
 			dieRolls[tmpRoll] = dieRolls[tmpRoll] + 1;
 		}
+
 		
+		int highest = 0;
+		
+		for (int i =0; i< dieRolls.length; i++) {
+			if(dieRolls[i] > highest) {
+				highest = dieRolls[i];
+			}
+		}
+		
+		//int divisidor = (int)(rolls / highest);
+		
+		double[] doMagic = new double[13];
+		
+		for (int i=0; i<dieRolls.length; i++) {
+			doMagic[i] = (int)(((double)dieRolls[i] / (double)highest) * 100.0);
+		}
+
+		for(int i = 0; i < dieRolls.length; i++) {
+			System.out.print(i + ": ");
+			for(int j = 0; j < ((int)doMagic[i]); j++) {
+				System.out.print("X");
+			}
+			System.out.println("");
+		}
 		
 		String tmpOut = "";
 		
@@ -38,4 +65,10 @@ public class Dice {
 	int rollDie() {
 		return ((int)(Math.random() * 6) + (int)(Math.random() * 6) + 2);
 	}
+	
+	void dumpDaGraph1() {
+		for(int i=0; i<dieRolls.length; i++){
+			dieRolls[i] = 0;
+	}
+}
 }
