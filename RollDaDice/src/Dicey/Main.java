@@ -6,7 +6,7 @@ public class Main {
 
 	//Test
 	private static Scanner in = new Scanner(System.in);
-	static String versionNum = "0.0.2";
+	static String versionNum = "0.0.3";
 	
 	public static void main(String[] args) {
 
@@ -16,6 +16,7 @@ public class Main {
 		
 		String userStatement = in.nextLine(); //listen to what the user is saying
 		
+		//Do Things till Nothing is entered
 		while (!userStatement.equalsIgnoreCase("")) {
 			System.out.println(dies.doMagicalDice(userStatement));
 			userStatement = in.nextLine();
